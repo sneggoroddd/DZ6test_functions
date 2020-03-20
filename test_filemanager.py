@@ -5,14 +5,15 @@ import sys
 
 
 def test_copy_file_or_directory():
-    name = bill.py
-    new_name = train1
+    name = "test_filemanager.py"
+    new_name = "test_filemanager1.py"
+
     def copy_file_or_directory(name, new_name):
         if os.path.isdir(name):
             shutil.copytree(name, new_name)
         else:
             shutil.copyfile(name, new_name)
 
-    assert  train1 in os.listdir()
-    os.rmdir(train1)
+    assert  new_name in os.listdir()
+    os.rmdir(new_name)
 
